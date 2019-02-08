@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>Watson Assistant Chat App</title>
+
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body >
+
+  <div id="contentParent">
+    <div id="chat-column-holder">
+      <div>
+        <p id="user-typing-field"></p>
+        <!--  <form action="/api/message" method="POST">-->
+
+        <label for="textInput" class="inputOutline">
+          <input id="textInput" name="input" class="input responsive-column" placeholder="Lets communicate" type="text"
+            autofocus>
+        </label>
+        <!--<input type="submit" name="Search">-->
+        <button id="myButton"onclick="ConversationPanel.inputKeyDown(event, document.getElementById('textInput')); " type="submit" >
+        Search
+        </button>
+        
+
+      </div>
+    </div>
+
+
+        </label>
+        
+
+ <script src="static/public/js/common.js"></script>
+  <script src="static/public/js/api.js"></script>
+  <script src="static/public/js/conversation.js"></script>
+  <script src="static/public/js/payload.js"></script>
+  <script src="static/public/js/global.js"></script>
+</body>
+</html>

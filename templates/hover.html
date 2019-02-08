@@ -1,0 +1,62 @@
+
+
+    <!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+    <title>Image Swap on Hover with CSS</title>
+
+    <style type="text/css">
+
+        .card {
+
+            width: 130px;
+
+            height: 195px;
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+        .card .img-top {
+
+            display: none;
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            z-index: 99;
+
+        }
+
+        .card:hover .img-top {
+
+            display: inline;
+
+        }
+
+    </style>
+
+    </head>
+
+    <body>
+
+        <div class="card">
+
+            <img src="logo2.png" alt="Card Back">
+
+            <img src="hover.png" class="img-top" alt="Card Front">
+
+        </div>
+
+    </body>
+
+    </html>
+

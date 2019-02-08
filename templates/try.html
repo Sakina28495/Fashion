@@ -1,0 +1,22 @@
+<html>
+<head> <script type="text/javascript">
+function checkForm(formname)
+{
+if(formname.radiobuttonname.value == '') {
+alert("Error: Please select a radio button!");
+return false;
+}
+document.getElementById('submit').value='Please wait..';void(0);
+return true;
+}
+</script>
+
+<form name="formname" onsubmit="return checkForm(this)">
+
+<input type="radio" value="radio1" name="radiobuttonname" style="display:inline;"> Radio 1<br>
+<input type="radio" value="radio2" name="radiobuttonname" style="display:inline;"> Radio 2<br>
+
+<input type="submit" value="Submit">
+</form>
+	</body></head>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comportement</title>
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+   <link rel="stylesheet" href="{{url_for('static',filename='vendor/magnific-popup/magnific-popup.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/creative.css') }}">
+	  	  <link rel="stylesheet" href="{{url_for('static',filename='css/creative.min.css') }}">
+
+	<link rel="stylesheet" href="{{url_for('static',filename='js/creative.js') }}">
+	  	  <link rel="stylesheet" href="{{url_for('static',filename='js/creative.min.js') }}">  
+
+	</head>
+
+<body id="page-top">
+<style>
+	  i {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 7px;
+}
+	.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+body {
+	background color: aliceblue;
+  font-family: Calluna, Arial, sans-serif;
+  min-height: 1000px;
+}
+#columns {
+	column-width: 355px;
+	column-gap: 17px;
+  width: 90%;
+	max-width: 1100px;
+	margin: 40px auto;
+}
+
+div#columns figure {
+	background: #fefefe;
+	border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	padding: 15px;
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+	width: 100%; height: auto;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+	color: #444;
+  line-height: 1.5;
+}
+
+div#columns small { 
+  font-size: 1rem;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+
+div#columns small a { 
+  color: #666; 
+  text-decoration: none; 
+  transition: .4s color;
+}
+
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
+
+body {
+ 
+}
+
+.sidenav {
+  width: 9.4%;
+  position: fixed;
+  z-index: 1;
+  top: 7%;
+  left: 0%;
+  background: #1D1D22;
+  overflow-x: hidden;
+  padding: 8px 8px;
+}
+
+.sidenav a {
+  padding: 16px 6px 10px 25px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #CBCBCB;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #FFFFFF;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+	  </style>
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="indexsam.html">Cpmt</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+       <!--     <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Stories</a>
+            </li>
+			  			              <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+	
+			              <li class="nav-item">
+              <a class="nav-link js-scroll-trigger"  onClick="javascript:logout();" href="Login_Page.html">LogOut</a>
+							 
+            </li>
+          </ul>
+			 
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+	
+<div id="columns">
+		{% for item in output  %}
+
+			<!--<img src="{{ item['p_img_small']  }}" width='50' height='50'>
+			<img src="{{ item['p_img_medium']  }}" width='100' height='100'>-->
+			<figure><a href="{{ item['p_product_url'] }}"><img src="{{ item['p_img_large']  }}" ></a>
+	<figcaption>Title : {{ item['p_title'] }}<br><strong>{{ item['p_discount'] }}</strong></figcaption> </figure>
+			<!--<h3>Discount : {{ item['p_discount'] }}</h3>
+			<h3>Title : {{ item['p_title'] }}</h3>
+			<h3>URL : <a href="{{ item['p_product_url'] }}">{{ item['p_product_url'] }}</h3>
+			<!--<h3><a href="{{ item['p_product_url'] }}"><button>Buy</button></a></h3>-->
+			
+		{% endfor %}
+
+		</div>		
+
+	</body>
+	</html>

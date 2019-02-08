@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+	<style media="screen">
+		#fb-btn{margin-top: 6px;}
+		#profile,#logout{display: none;}
+	</style>
+	<title></title>
+</head>
+<body>
+	<script>
+		window.fbAsyncInit = function()	{
+		    FB.init({
+		      appId            : '210033943240879',
+		      autoLogAppEvents : true,
+		      xfbml            : true,
+		      version          : 'v3.2'
+			});
+
+			FB.getLoginStatus(function(response) {
+			    statusChangeCallback(response);
+			});
+		};
+
+	  	(function(d, s, id)	{
+		    var js, fjs = d.getElementsByTagName(s)[0];
+		    if (d.getElementById(id)) {return;}
+		    js = d.createElement(s); js.id = id;
+		    js.src = "https://connect.facebook.net/en_US/sdk.js";
+		    fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+		function statusChangeCallback(response)	{
+	  		if(response.status === 'connected')	{
+	  			console.log('Logged in and Authenticated');
+	  			setElements(true);
+	  			testAPI();
+	  		}
+	  		else{
+	  			console.log('Not Authenticated');
+	  			setElements(false);
+	  		}
+	  	}
+
+		function checkLoginState() {
+	  		FB.getLoginStatus(function(response) {
+	    	statusChangeCallback(response);
+	  		});
+		}
+
+		function testAPI() {
+			FB.api('/me?fields=name,email,birthday,location,picture.type(large),photos{updated_time,images},age_range,gender,hometown,likes{products},feed{caption,description,full_picture,message,link,story,created_time}',function(response){
+				if (response && !response.error) {
+					console.log(response);
+					buildProfile(response);
+				}
+			})
+		}
+
+		//<template > ${show_image(user.picture.data.url)}; </template>
+		function buildProfile(user) {
+			
+			//show_image(user.picture.data.url);
+
+			let profile = `
+
+				<h3> ${user.name}</h3>
+
+				<ul class="list-group" style="font-size:12pt">
+					<li class="list-group-item" style="width:300pt"> <b style="font-size:14pt;letter-spacing:1px"> <i> User Id : </i> </b> ${user.id} </li>
+					<li class="list-group-item" style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> Email : </i> </b> ${user.email} </li>
+					<li class="list-group-item " style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> Birthday : </i> </b> ${user.birthday} </li>
+					<li class="list-group-item" style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> HomeTown : </i> </b> ${user.hometown.name} </li>
+					<li class="list-group-item " style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> Location : </i> </b> ${user.location.name} </li>
+					<li class="list-group-item" style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> Age Range (Minimum) : </i> </b> ${user.age_range.min} </li>
+					<li class="list-group-item " style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> Gender : </i> </b> ${user.gender} </li>
+					<li class="list-group-item " style="width:300pt"> <b style="font-size:13pt;letter-spacing:1px"> <i> Feeds : </i> </b> ${user.feed.data[5].message} </li>
+					</li>
+				</ul>
+			`;
+			document.getElementById('profile').innerHTML = profile;
+		}
+
+		function show_image(src) {
+		    var img = document.createElement("img");
+		    img.src = src;
+		    img.width = 220;
+		    img.height = 220;
+		    // This next line will just add it to the <body> tag
+		    document.body.appendChild(img);
+		    return img;
+		}
+
+		function setElements(isLoggedIn){
+			if(isLoggedIn){
+				document.getElementById('logout').style.display = 'block';
+				document.getElementById('profile').style.display = 'block';
+				document.getElementById('fb-btn').style.display = 'none';
+				document.getElementById('heading').style.display = 'none';
+			} else {
+				document.getElementById('logout').style.display = 'none';
+				document.getElementById('profile').style.display = 'none';
+				document.getElementById('fb-btn').style.display = 'block';
+				document.getElementById('heading').style.display = 'block';
+			}
+
+		}
+
+		function logout() {
+			FB.logout(function(response){
+				setElements(false);
+			});
+		}
+
+	</script>
+
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark  navbar-default ">
+     <b> <i> <a class="navbar-brand" style="color: #000000;font-size: 25pt" href="#">Comportement</a> </i></b>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="index.html" style="color: #000000;font-size: 14pt; margin-left: 50px">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav">
+          <li><a href="#" id="logout" onclick="logout()" style="color: #000000;font-size: 14pt; margin-left: 50px">Logout</a></li>
+          	<fb:login-button 
+          		id="fb-btn"
+				scope="public_profile,email,user_birthday,user_location,user_photos,user_age_range,user_gender,user_hometown,user_likes,user_posts"
+				onlogin="checkLoginState();"><input type="image" src="file:///C|/wamp/www/fb.png" alt="Submit" width="309" height="55">
+			</fb:login-button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+    	<br>
+    	<h3 id="heading">Log In to View your Profile</h3>
+    	<div id="profile"></div>
+
+    </div>
+</body>
+</html>

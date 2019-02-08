@@ -1,0 +1,778 @@
+{
+  "name": "GH",
+  "intents": [
+    {
+      "intent": "vague",
+      "examples": [
+        {
+          "text": "I need to buy clothes"
+        },
+        {
+          "text": "i like shopping"
+        },
+        {
+          "text": "i love buying clothes"
+        },
+        {
+          "text": "buy something"
+        },
+        {
+          "text": "i am in the mood of shopping"
+        },
+        {
+          "text": "just shop"
+        },
+        {
+          "text": "clothes for gifting purpose"
+        },
+        {
+          "text": "buy clothes for loved once"
+        },
+        {
+          "text": "i need to buy clothes for my parents"
+        },
+        {
+          "text": "i got some cash and i need to spend on something which i love doing and that's shopping"
+        }
+      ],
+      "description": "Identifying users intention"
+    },
+    {
+      "intent": "General_About_You",
+      "examples": [
+        {
+          "text": "Tell me something about yourself"
+        },
+        {
+          "text": "About you"
+        },
+        {
+          "text": "Can I use another language?"
+        },
+        {
+          "text": "Describe your self"
+        },
+        {
+          "text": "Do you have a name?"
+        },
+        {
+          "text": "Do you know who you are?"
+        },
+        {
+          "text": "How can I configure you?"
+        },
+        {
+          "text": "How do you function?"
+        },
+        {
+          "text": "How old are you?"
+        },
+        {
+          "text": "I want to set up the chat bot for my shop"
+        },
+        {
+          "text": "Introduce your self"
+        },
+        {
+          "text": "Let us talk about you"
+        },
+        {
+          "text": "Tell me about your life"
+        },
+        {
+          "text": "What languages do you speak?"
+        },
+        {
+          "text": "What should I know about you?"
+        },
+        {
+          "text": "What's your name?"
+        },
+        {
+          "text": "Where are you from?"
+        },
+        {
+          "text": "Where were you born?"
+        },
+        {
+          "text": "Who are you?"
+        },
+        {
+          "text": "Why are you here?"
+        }
+      ],
+      "description": "Request generic personal attributes."
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "You there"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "Who is this?"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Good to see you"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hello Agent"
+        },
+        {
+          "text": "Have you been well?"
+        },
+        {
+          "text": "How have you been?"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "How are things going?"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "Hi advisor"
+        },
+        {
+          "text": "Hey you"
+        },
+        {
+          "text": "Hey twin"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hey there all"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "How is it going?"
+        },
+        {
+          "text": "How r u?"
+        },
+        {
+          "text": "Looking good eve"
+        },
+        {
+          "text": "Ok take me back"
+        },
+        {
+          "text": "What's new?"
+        }
+      ],
+      "description": "Greet the bot."
+    },
+    {
+      "intent": "country",
+      "examples": [
+        {
+          "text": "U S"
+        },
+        {
+          "text": "India"
+        }
+      ],
+      "description": "identifying where the user is travelling"
+    },
+    {
+      "intent": "General_Negative_Feedback",
+      "examples": [
+        {
+          "text": "Do not like you?"
+        },
+        {
+          "text": "Everyone hates you"
+        },
+        {
+          "text": "Hate you"
+        },
+        {
+          "text": "I do not like you"
+        },
+        {
+          "text": "I hate this!"
+        },
+        {
+          "text": "I hate you"
+        },
+        {
+          "text": "It is annoying"
+        },
+        {
+          "text": "Quit annoying me"
+        },
+        {
+          "text": "Robots are boring"
+        },
+        {
+          "text": "Robots are stupid"
+        },
+        {
+          "text": "Stupid"
+        },
+        {
+          "text": "Why are you so annoying?"
+        },
+        {
+          "text": "Why are you stupid?"
+        },
+        {
+          "text": "You are having delusions"
+        },
+        {
+          "text": "You are on my nerves"
+        },
+        {
+          "text": "You are very frustrating"
+        },
+        {
+          "text": "You do not seem smart"
+        },
+        {
+          "text": "You're really frustrating"
+        },
+        {
+          "text": "You're really irritating"
+        },
+        {
+          "text": "You're too stupid"
+        }
+      ],
+      "description": "Express unfavorable feedback."
+    },
+    {
+      "intent": "General_Positive_Feedback",
+      "examples": [
+        {
+          "text": "Can't believe you are that good"
+        },
+        {
+          "text": "How cool is this?"
+        },
+        {
+          "text": "I like what you did there! :)"
+        },
+        {
+          "text": "I'm looking forward to working with you again! :)"
+        },
+        {
+          "text": "Love your work"
+        },
+        {
+          "text": "Ok thank you"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "This is good"
+        },
+        {
+          "text": "This is great"
+        },
+        {
+          "text": "This is so cool"
+        },
+        {
+          "text": "You are awesome"
+        },
+        {
+          "text": "You are great"
+        },
+        {
+          "text": "You are the best"
+        },
+        {
+          "text": "You are wonderful"
+        },
+        {
+          "text": "You gave me exactly what I need!"
+        },
+        {
+          "text": "You the man"
+        },
+        {
+          "text": "You're a genius!"
+        },
+        {
+          "text": "You've been so helpful :)"
+        },
+        {
+          "text": "Brilliant!"
+        }
+      ],
+      "description": "Express positive sentiment or gratitude."
+    },
+    {
+      "intent": "office",
+      "examples": [
+        {
+          "text": "I need to buy dress for office party?"
+        },
+        {
+          "text": "I just got my promotion, i need to buy new clothes for my post?"
+        },
+        {
+          "text": "office wear"
+        },
+        {
+          "text": "i want to buy for cocktail party in the office"
+        },
+        {
+          "text": "I NEED TO BUY CLOTHES FOR A OFFICE MEETING"
+        },
+        {
+          "text": "office casuals"
+        },
+        {
+          "text": "outfits for office"
+        },
+        {
+          "text": "clothes for office casuals"
+        },
+        {
+          "text": "I need to purchase clothes for office ?"
+        },
+        {
+          "text": "office meeting"
+        }
+      ],
+      "description": "Identifying intention of the users for shopping"
+    },
+    {
+      "intent": "travel",
+      "examples": [
+        {
+          "text": "Shopping to travel"
+        },
+        {
+          "text": "I'm looking for clothes to wear during my trip?"
+        },
+        {
+          "text": "I want to buy clothes for travel"
+        },
+        {
+          "text": "I need to buy clothes for tour"
+        },
+        {
+          "text": "clothes for travel lovers"
+        },
+        {
+          "text": "looking to buy clothes for travellers"
+        },
+        {
+          "text": "travelling clothes"
+        },
+        {
+          "text": "clothes for vacation"
+        },
+        {
+          "text": "I want to purchase items to take away on my travel"
+        },
+        {
+          "text": "I want to buy for vacation?"
+        }
+      ],
+      "description": "Identify users intention for buying clothes"
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "See you later"
+        },
+        {
+          "text": "Shut up"
+        },
+        {
+          "text": "Stop doing this"
+        },
+        {
+          "text": "Stop talking to me"
+        },
+        {
+          "text": "Thank you for your time"
+        },
+        {
+          "text": "Thanks, bye!"
+        },
+        {
+          "text": "Thanks very much, bye!"
+        },
+        {
+          "text": "That is all"
+        },
+        {
+          "text": "That's everything"
+        },
+        {
+          "text": "Time to go"
+        },
+        {
+          "text": "Get lost"
+        },
+        {
+          "text": "Finished now, good bye"
+        },
+        {
+          "text": "Ending this session"
+        },
+        {
+          "text": "End trial"
+        },
+        {
+          "text": "Cya later"
+        },
+        {
+          "text": "Catch you later"
+        },
+        {
+          "text": "Bye now"
+        },
+        {
+          "text": "Bye bye"
+        },
+        {
+          "text": "Go away"
+        },
+        {
+          "text": "Go off"
+        },
+        {
+          "text": "Going now"
+        },
+        {
+          "text": "Good. bye."
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Have a nice day?"
+        },
+        {
+          "text": "Hey bot go away"
+        },
+        {
+          "text": "I am leaving"
+        },
+        {
+          "text": "I am out of here"
+        },
+        {
+          "text": "I d like to stop doing this"
+        },
+        {
+          "text": "I have got to go"
+        },
+        {
+          "text": "I want to quit"
+        },
+        {
+          "text": "I'm done"
+        },
+        {
+          "text": "Im done"
+        },
+        {
+          "text": "Im good thank you"
+        },
+        {
+          "text": "I'm leaving now"
+        },
+        {
+          "text": "It was nice chatting with you"
+        },
+        {
+          "text": "Ok goodbye"
+        },
+        {
+          "text": "See you"
+        }
+      ],
+      "description": "End the conversation."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "time",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "Morning",
+          "patterns": [
+            "for breakfast",
+            "before 12pm",
+            "early in the day",
+            "6am-11.59am"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "afternoon",
+          "patterns": [
+            "before evening",
+            "lunch time",
+            "noon",
+            "12pm-5pm"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "Night",
+          "patterns": [
+            "late evening",
+            "after lunch",
+            "dinner",
+            "pm"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    },
+    {
+      "entity": "sys-person",
+      "values": []
+    },
+    {
+      "entity": "greeting",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "thanks",
+          "synonyms": [
+            "thanks",
+            "ty"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ok",
+          "synonyms": [
+            "Ok",
+            "K",
+            "Okay",
+            "anyway"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "thankyou",
+          "synonyms": [
+            "thank you",
+            "GoodBye",
+            "Bye",
+            "See you"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Season",
+      "output": {
+        "generic": [
+          {
+            "time": 10,
+            "typing": false,
+            "response_type": "pause"
+          },
+          {
+            "values": [
+              {
+                "text": "During which season are you travelling ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1545372662385",
+      "metadata": {},
+      "conditions": "#country",
+      "dialog_node": "node_4_1546000356558"
+    },
+    {
+      "type": "standard",
+      "title": "Travel",
+      "output": {
+        "text": {
+          "values": [
+            "During which season are you travelling ?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1545377278030",
+      "metadata": {},
+      "conditions": "#travel",
+      "dialog_node": "node_10_1545377673264",
+      "previous_sibling": "node_7_1545377505705"
+    },
+    {
+      "type": "standard",
+      "title": "Office",
+      "output": {
+        "text": {
+          "values": [
+            "What is your purpose? Are you buying for regular wear or some other occasion in the office?​"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1545377278030",
+      "metadata": {},
+      "conditions": "#office",
+      "dialog_node": "node_7_1545377505705"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "Welcome",
+      "disabled": true,
+      "metadata": {},
+      "dialog_node": "node_1_1545999849130"
+    },
+    {
+      "type": "standard",
+      "title": "Office",
+      "output": {
+        "text": {
+          "values": [
+            "What is your purpose? Are you buying for regular wear or some other occasion in the office?​"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#office",
+      "dialog_node": "node_3_1545373794117",
+      "previous_sibling": "node_1_1545372662385"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "text": {
+          "values": [
+            "I didn't understand. You can try rephrasing.",
+            "Can you reword your statement? I'm not understanding.",
+            "I didn't get your meaning."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1545377278030"
+    },
+    {
+      "type": "standard",
+      "title": "Vague",
+      "output": {
+        "text": {
+          "values": [
+            "For what purpose you need to buy clothes or do shopping?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#vague",
+      "dialog_node": "node_6_1545377278030",
+      "previous_sibling": "node_3_1545373794117"
+    },
+    {
+      "type": "standard",
+      "title": "Travel",
+      "output": {
+        "text": {
+          "values": [
+            "Which country are you travelling?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "#travel",
+      "dialog_node": "node_1_1545372662385",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "text": {
+          "values": [
+            "Welcome to the Comportment Website. How can I help you today?",
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome",
+      "digress_in": "does_not_return",
+      "dialog_node": "Welcome",
+      "digress_out": "allow_all"
+    }
+  ],
+  "workspace_id": "9d05d362-4b0f-4599-846e-edf8551bebc3",
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "status": "Training"
+}

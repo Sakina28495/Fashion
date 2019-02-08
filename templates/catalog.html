@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comportement</title>
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+   <link rel="stylesheet" href="{{url_for('static',filename='vendor/magnific-popup/magnific-popup.css') }}">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/creative.css') }}">
+	  	  <link rel="stylesheet" href="{{url_for('static',filename='css/creative.min.css') }}">
+
+	<link rel="stylesheet" href="{{url_for('static',filename='js/creative.js') }}">
+	  	  <link rel="stylesheet" href="{{url_for('static',filename='js/creative.min.js') }}">  
+	  
+  </head>
+
+  <body id="page-top">
+<style>
+	  i {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 7px;
+}
+	.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+body {
+	background color: aliceblue;
+  font-family: Calluna, Arial, sans-serif;
+  min-height: 1000px;
+}
+#columns {
+	column-width: 355px;
+	column-gap: 17px;
+  width: 90%;
+	max-width: 1100px;
+	margin: 40px auto;
+}
+
+div#columns figure {
+	background: #fefefe;
+	border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	padding: 15px;
+	padding-bottom: 10px;
+	transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+	width: 100%; height: auto;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+	color: #444;
+  line-height: 1.5;
+}
+
+div#columns small { 
+  font-size: 1rem;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+
+div#columns small a { 
+  color: #666; 
+  text-decoration: none; 
+  transition: .4s color;
+}
+
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
+	  </style>
+	  
+	  
+	    <div id="fb-root"></div>
+
+        <script>
+        window.fbAsyncInit = function() {
+                FB.init({
+                appId: '210033943240879',
+                status: true,
+                cookie: true,
+                xfbml: true
+
+            });
+                var status = FB.getLoginStatus();
+        };
+
+        // Load the SDK asynchronously
+        (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+        }(document));
+
+        function login() {
+            FB.login(function(response) {
+
+            // handle the response
+            console.log("Response goes here!");
+
+            }, {scope: 'public_profile,email,user_birthday,user_location,user_photos,user_age_range,user_gender,user_hometown,user_likes,user_posts'});            
+        }
+
+        function logout() {
+            FB.logout(function(response) {
+              // user is now logged out
+              console.log("logged out");
+            });
+        }
+
+        
+
+        console.log(status);
+
+        </script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="indexsam.html">Cpmt</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+       <!--     <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Stories</a>
+            </li>
+			  			              <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+	
+			              <li class="nav-item">
+              <a class="nav-link js-scroll-trigger"  onClick="javascript:logout();" href="Login_Page.html">LogOut</a>
+							 
+            </li>
+          </ul>
+			 
+        </div>
+      </div>
+    </nav>
+<br> 
+	  <br>
+  <!--  <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>We know what suits you</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">SELECT YOUR STYLE</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#portfolio"><i class="arrow down"></i></a>
+          </div>
+        </div>
+      </div>
+    </header> -->
+	  
+    <section class="p-0" id="portfolio">
+<div id="columns">
+  <figure>
+  <img src="static/img/portfolio/thumbnails/11.jpg">
+	<figcaption>Cinderella wearing European fashion of the mid-1860’s</figcaption>
+	</figure>
+	
+	<figure>
+	<img src="static/img/portfolio/thumbnails/12.jpg">
+	<figcaption>Rapunzel, clothed in 1820’s period fashion</figcaption>
+	</figure>
+	
+  <figure>
+	<img src="static/img/portfolio/thumbnails/10.jpg">
+	<figcaption>Belle, based on 1770’s French court fashion</figcaption>
+	</figure>
+  
+	<figure>
+	<img src="static/img/portfolio/thumbnails/21.jpg">
+	<figcaption>Mulan, based on the Ming Dynasty period</figcaption>
+	</figure>
+	
+   <figure>
+	 <img src="static/img/portfolio/thumbnails/3.jpg">
+	<figcaption>Sleeping Beauty, based on European fashions in 1485</figcaption>
+	</figure>
+	
+   <figure>
+	 <img src="static/img/portfolio/thumbnails/5.jpg">
+	<figcaption>Pocahontas based on 17th century Powhatan costume</figcaption>
+	</figure>
+  
+	<figure>
+	<img src="static/img/portfolio/thumbnails/16.jpg">
+	<figcaption>Snow White, based on 16th century German fashion</figcaption>
+	</figure>	
+  
+   <figure>
+	<img src="static/img/portfolio/thumbnails/17.jpg">
+	<figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
+	</figure>
+  
+	   <figure>
+	<img src="static/img/portfolio/thumbnails/8.jpg">
+	<figcaption>Ariel wearing an evening gown of the 1890’s</figcaption>
+	</figure>
+	
+    <figure>
+	<img src="static/img/portfolio/thumbnails/9.jpg">
+    <figcaption>Tiana wearing the <i>robe de style</i> of the 1920’s</figcaption>
+	</figure>	
+  
+	</div>
+          
+    </section>
+	  
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="static/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="static/js/creative.min.js"></script>
+
+  </body>
+
+</html>
